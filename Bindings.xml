@@ -1,0 +1,3 @@
+<Bindings>
+    <Binding header="TERONPWSREMOVER_HEADER" name="TERONPWSREMOVER_TOGGLE">TeronPWSRemoverButton_OnClick();</Binding>
+</Bindings>
