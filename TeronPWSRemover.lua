@@ -2,7 +2,7 @@ BINDING_HEADER_TERONPWSREMOVER_HEADER = "TeronPWSRemover";
 BINDING_NAME_TERONPWSREMOVER_TOGGLE = "Toggle TeronPWSRemover";
 
 SLASH_TOGGLE1 = '/pwsremove'
-SlashCmdList["TOGGLE"] = function(command)
+SlashCmdList["TOGGLE1"] = function(command)
     if command == "disable" then
         Toggle_PWSRemove = false
         UIErrorsFrame:Clear();
