@@ -2,7 +2,7 @@
 ## Title: TeronPWSRemover
 ## Notes: A simple addon that removes the Priest's Power Word: Shield buff from Warrior players.
 ## Author: Teron
-## Version: v1.0.0
+## Version: v1.0.1
 ## SavedVariables: Toggle_PWSRemove, TeronPWSRemover_Config
 
 local TeronPWSRemover_Config
