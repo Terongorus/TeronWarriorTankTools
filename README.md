@@ -1,4 +1,4 @@
-# TeronWarriorTankTools
+# Teron's Warrior Tank Tools
 This is an addon to help warriors manage their tanking better. 
 
 ## Power Word: Shield Remover (PWS Remover)
