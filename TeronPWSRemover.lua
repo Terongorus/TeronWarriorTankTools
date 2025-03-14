@@ -16,12 +16,12 @@ SlashCmdList["TOGGLE_PWS"] = function(command)
 end
 
 local f = CreateFrame("Aura Frame")
-f:RegisterEvent("PLAYER_AURAS_CHANGED")
+f:RegisterEvent("UNIT_AURA")
 
 f:SetScript("OnEvent", function()
-        if event == "PLAYER_AURAS_CHANGED" then
+        if event == "UNIT_AURA" then
             if WarriorIsShieldEquipped() and Toggle_PWSRemove then
-            	CancelPowerWordShield()
+                CancelPowerWordShield()
             end
         end
     end)
@@ -65,4 +65,5 @@ function CancelPowerWordShield()
     end
     return nil
 end
+
 
