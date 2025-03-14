@@ -5,12 +5,12 @@ function TeronPWSRemoverButton_OnClick()
         UIErrorsFrame:Clear();
 		--Green colour for enabled mode
         UIErrorsFrame:AddMessage("|cff00ff00Power Word: Shield Remover Enabled|r"); 
-        TeronPWSRemoverButton:SetNormalTexture("Interface\\Addons\\TeronPWSRemover\\Spell_Holy_PowerWordShield_enabled")
+        TeronPWSRemoverButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Spell_Holy_PowerWordShield_enabled")
     else
         UIErrorsFrame:Clear();
 		--Red colour for disabled mode
         UIErrorsFrame:AddMessage("|cffff0000Power Word: Shield Remover Disabled|r"); 
-        TeronPWSRemoverButton:SetNormalTexture("Interface\\Addons\\TeronPWSRemover\\Spell_Holy_PowerWordShield_disabled")
+        TeronPWSRemoverButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Spell_Holy_PowerWordShield_disabled")
         return
     end
 end

@@ -1,5 +1,6 @@
-BINDING_HEADER_TERONPWSREMOVER_HEADER = "TeronPWSRemover";
-BINDING_NAME_TERONPWSREMOVER_TOGGLE = "Toggle TeronPWSRemover";
+BINDING_HEADER_TERONWARRIORTANKTOOLS_HEADER = "Teron Warrior Tank Tools";
+BINDING_NAME_TERONWARRIORTANKTOOLS_PWSREMOVE = "Toggle PWS Remover";
+BINDING_NAME_TERONWARRIORTANKTOOLS_TANKMODE = "Toggle Tank Mode";
 
 SLASH_TOGGLE_PWS = '/pwsremove'
 SlashCmdList["TOGGLE_PWS"] = function(command)
@@ -16,12 +17,13 @@ SlashCmdList["TOGGLE_PWS"] = function(command)
 end
 
 local f = CreateFrame("Aura Frame")
-f:RegisterEvent("UNIT_AURA")
+f:RegisterEvent("PLAYER_AURAS_CHANGED")
 
 f:SetScript("OnEvent", function()
-        if event == "UNIT_AURA" then
+        if event == "PLAYER_AURAS_CHANGED" then
             if WarriorIsShieldEquipped() and Toggle_PWSRemove then
-                CancelPowerWordShield()
+                CancelBlessingOfLight();
+                CancelPowerWordShield();
             end
         end
     end)
@@ -42,7 +44,7 @@ function WarriorIsShieldEquipped()
 end
 
 function CancelPowerWordShield()
-    local buff = "spell_holy_powerwordshield"
+    local buff = {"Spell_Holy_PowerWordShield"}
     local counter = 0
     while GetPlayerBuff(counter) >= 0 do
         local index, untilCancelled = GetPlayerBuff(counter)
@@ -66,4 +68,28 @@ function CancelPowerWordShield()
     return nil
 end
 
+function CancelBlessingOfLight()
+    local buff = {"Spell_Holy_PrayerOfHealing02"}
+    local counter = 0
+    while GetPlayerBuff(counter) >= 0 do
+        local index, untilCancelled = GetPlayerBuff(counter)
+        if untilCancelled ~= 1 then
+            local texture = GetPlayerBuffTexture(index)
+            if texture then 
+                local i = 1
+                while buff[i] do
+                    if string.find(texture, buff[i]) then
+                        CancelPlayerBuff(index);
+                        UIErrorsFrame:Clear();
+                        UIErrorsFrame:AddMessage("Blessing of Light Removed");
+                        return
+                    end
+                    i = i + 1
+                end
+            end
+        end
+        counter = counter + 1
+    end
+    return nil
+end
 
