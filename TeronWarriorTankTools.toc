@@ -1,5 +1,5 @@
 ## Interface: 11200
-## Title: Teron Warrior Tank Tools
+## Title: Teron's Warrior Tank Tools
 ## Notes: This is an addon to help warriors manage their tanking better. Includes Tank Mode and Power Word: Shield Remover.
 ## Author: Teron
 ## Version: v1.1.0
