@@ -16,13 +16,13 @@ SlashCmdList["TOGGLE_PWS"] = function(command)
     end
 end
 
-local f = CreateFrame("Aura Frame")
+local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_AURAS_CHANGED")
 
 f:SetScript("OnEvent", function()
         if event == "PLAYER_AURAS_CHANGED" then
-            if WarriorIsShieldEquipped() and Toggle_PWSRemove then
-                CancelBlessingOfLight();
+            if Toggle_PWSRemove then
+--                CancelBlessingOfLight();
                 CancelPowerWordShield();
             end
         end
@@ -68,28 +68,28 @@ function CancelPowerWordShield()
     return nil
 end
 
-function CancelBlessingOfLight()
-    local buff = {"Spell_Holy_PrayerOfHealing02"}
-    local counter = 0
-    while GetPlayerBuff(counter) >= 0 do
-        local index, untilCancelled = GetPlayerBuff(counter)
-        if untilCancelled ~= 1 then
-            local texture = GetPlayerBuffTexture(index)
-            if texture then 
-                local i = 1
-                while buff[i] do
-                    if string.find(texture, buff[i]) then
-                        CancelPlayerBuff(index);
-                        UIErrorsFrame:Clear();
-                        UIErrorsFrame:AddMessage("Blessing of Light Removed");
-                        return
-                    end
-                    i = i + 1
-                end
-            end
-        end
-        counter = counter + 1
-    end
-    return nil
-end
+--function CancelBlessingOfLight()
+--    local buff = {"Spell_Holy_PrayerOfHealing02"}
+--    local counter = 0
+--    while GetPlayerBuff(counter) >= 0 do
+--        local index, untilCancelled = GetPlayerBuff(counter)
+--        if untilCancelled ~= 1 then
+--            local texture = GetPlayerBuffTexture(index)
+--            if texture then 
+--                local i = 1
+--                while buff[i] do
+--                    if string.find(texture, buff[i]) then
+--                        CancelPlayerBuff(index);
+--                        UIErrorsFrame:Clear();
+--                        UIErrorsFrame:AddMessage("Blessing of Light Removed");
+--                        return
+--                    end
+--                    i = i + 1
+--                end
+--            end
+--        end
+--        counter = counter + 1
+--    end
+--    return nil
+--end
 
