@@ -1,3 +1,4 @@
+--[[
 function TeronAutoMarkButton_OnClick()
     Toggle_AutoMark = not Toggle_AutoMark
     if Toggle_AutoMark then
@@ -30,7 +31,7 @@ function TeronAutoMarkButton_UpdatePosition()
 		(80 * sin(TeronAutoMark_Config.ButtonPos)) - 52
 	);
 end
-
+]]
 function TeronAutoMark()
 	local index = 0
 	if UnitExists("target") then
