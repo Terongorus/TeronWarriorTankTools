@@ -58,5 +58,8 @@ function TeronAutoMark()
 	if target_index > 8 then
 		target_index = 0;
 	end
+	if attacking then
+		target_index = 0;
+	end
 end
 
