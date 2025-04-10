@@ -32,9 +32,31 @@ function TeronAutoMarkButton_UpdatePosition()
 	);
 end
 ]]
+local attacking;
+local target_changed;
+local combat;
+local target_index = 0
+local f = CreateFrame("Frame", "TeronAutoMarkFrame");
+
+
+combat = PlayerFrame.InCombat;
+
+f:RegisterEvent("PLAYER_ENTER_COMBAT");
+f:RegisterEvent("PLAYER_TARGET_CHANGED");
+f:SetScript("OnEvent", function()
+	attacking = event == "PLAYER_ENTER_COMBAT";
+	target_changed = event == "PLAYER_TARGET_CHANGED";
+end)
+
 function TeronAutoMark()
-	local index = 0
-	if UnitExists("target") then
-		SetRaidTarget("target", index)
+	if (attacking or target_changed or combat) and UnitExists("target") then
+		SetRaidTarget("target", target_index)
+	end
+	if target_changed and UnitExists("target") then
+		target_index = target_index + 1;
+	end
+	if target_index > 8 then
+		target_index = 0;
 	end
 end
+
