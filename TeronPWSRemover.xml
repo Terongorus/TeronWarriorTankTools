@@ -23,7 +23,7 @@
 						</Offset>
 					</Anchor>
 				</Anchors>
-				<NormalTexture file="Interface\AddOns\TeronPWSRemover\Spell_Holy_PowerWordShield_enabled"/>
+				<NormalTexture file="Interface\AddOns\TeronPWSRemover\Icons\Spell_Holy_PowerWordShield_enabled"/>
 				<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
 				<Scripts>
 					<OnClick>

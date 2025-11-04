@@ -13,7 +13,7 @@ local Toggle_PWSRemove = true
 local Toggle_AutoMark = false
 TeronPWSRemover.lua
 TeronPWSRemover.xml
-TeronPWSRemoverMinimap.lua
+TeronPWSRemoverButton.lua
 TeronStanceTankMode.lua
 TeronStanceTankMode.xml
 Bindings.xml

@@ -23,7 +23,7 @@
 						</Offset>
 					</Anchor>
 				</Anchors>
-				<NormalTexture file="Interface\Addons\TeronWarriorTankTools\Ability_Warrior_DefensiveStance"/>
+				<NormalTexture file="Interface\Addons\TeronWarriorTankTools\Icons\Ability_Warrior_DefensiveStance"/>
 				<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
 				<Scripts>
 					<OnClick>
