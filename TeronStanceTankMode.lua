@@ -4,12 +4,12 @@ function TeronTankModeButton_OnClick()
         UIErrorsFrame:Clear();
 		--Green colour for enabled mode
         UIErrorsFrame:AddMessage("|cff00ff00Tank Mode Enabled! Using Defensive Stance!|r");
-        TeronTankModeButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Ability_Warrior_DefensiveStance_16x16")
+        TeronTankModeButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Icons\\Ability_Warrior_DefensiveStance_16x16")
     else
         UIErrorsFrame:Clear();
 		--Red colour for disabled mode
         UIErrorsFrame:AddMessage("|cffff0000Tank Mode Disabled! Using Battle Stance!|r"); 
-        TeronTankModeButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Ability_Warrior_OffensiveStance_16x16")
+        TeronTankModeButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Icons\\Ability_Warrior_OffensiveStance_16x16")
         return
     end
 end
