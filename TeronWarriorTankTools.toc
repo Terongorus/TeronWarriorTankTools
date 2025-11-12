@@ -2,7 +2,7 @@
 ## Title: Teron's Warrior Tank Tools
 ## Notes: This is an addon to help warriors manage their tanking better. Includes Tank Mode and Power Word: Shield Remover.
 ## Author: Teron
-## Version: v1.1.0
+## Version: v1.2.0
 ## SavedVariables: Toggle_PWSRemove, TeronPWSRemover_Config, Toggle_TankMode, TeronTankMode_Config, Toggle_AutoMark, TeronAutoMark_Config
 
 local TeronPWSRemover_Config
