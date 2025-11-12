@@ -5,12 +5,6 @@
 ## Version: v1.1.0
 ## SavedVariables: Toggle_PWSRemove, TeronPWSRemover_Config, Toggle_TankMode, TeronTankMode_Config, Toggle_AutoMark, TeronAutoMark_Config
 
-local TeronPWSRemover_Config
-local TeronTankMode_Config
-local TeronAutoMark_Config
-local Toggle_TankMode = true
-local Toggle_PWSRemove = true
-local Toggle_AutoMark = false
 TeronPWSRemover.lua
 TeronPWSRemover.xml
 TeronPWSRemoverButton.lua
