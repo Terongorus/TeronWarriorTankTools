@@ -18,6 +18,11 @@ function TeronTankModeButton_Init()
 	if(TeronTankMode_Config.ButtonShow == false) then
 		TeronTankModeButtonFrame:Hide();
 	end
+    if Toggle_TankMode then
+        TeronTankModeButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Icons\\Ability_Warrior_DefensiveStance_16x16")
+    else
+        TeronTankModeButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Icons\\Ability_Warrior_OffensiveStance_16x16")
+    end
 end
 
 --Updates the position of the minimap button

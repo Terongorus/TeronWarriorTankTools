@@ -34,7 +34,7 @@
 		</Frames>
 		<Scripts>
 			<OnLoad>
-				<!--TeronPWSRemoverButton_Init();-->
+				TeronPWSRemoverButton_Init();
 			</OnLoad>
 			<OnEvent>
 				TeronPWSRemoverButton_UpdatePosition();

@@ -19,6 +19,11 @@ function TeronPWSRemoverButton_Init()
 	if(TeronPWSRemover_Config.ButtonShow == false) then
 		TeronPWSRemoverButtonFrame:Hide();
 	end
+	if Toggle_PWSRemove then
+		TeronPWSRemoverButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Icons\\Spell_Holy_PowerWordShield_enabled")
+	else
+		TeronPWSRemoverButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Icons\\Spell_Holy_PowerWordShield_disabled")
+	end
 end
 
 --Updates the position of the minimap button
