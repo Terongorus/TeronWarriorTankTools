@@ -14,9 +14,9 @@ function TeronAutoMarkButton_OnClick()
 end
 
 function TeronTankModeButton_Init()
-	if(TeronAutoMark_Config.ButtonShow == false) then
-		TeronAutoMarkButtonFrame:Hide();
-	end
+--	if(TeronAutoMark_Config.ButtonShow == false) then
+--		TeronAutoMarkButtonFrame:Hide();
+--	end
 end
 
 --Updates the position of the minimap button

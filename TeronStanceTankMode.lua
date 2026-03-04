@@ -15,9 +15,9 @@ function TeronTankModeButton_OnClick()
 end
 
 function TeronTankModeButton_Init()
-	if(TeronTankMode_Config.ButtonShow == false) then
-		TeronTankModeButtonFrame:Hide();
-	end
+--	if(TeronTankMode_Config.ButtonShow == false) then
+--		TeronTankModeButtonFrame:Hide();
+--	end
     if Toggle_TankMode then
         TeronTankModeButton:SetNormalTexture("Interface\\Addons\\TeronWarriorTankTools\\Icons\\Ability_Warrior_DefensiveStance_16x16")
     else
