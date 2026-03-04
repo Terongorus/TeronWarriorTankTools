@@ -1,4 +1,4 @@
 <Bindings>
-    <Binding header="Warrior Tank Tools" name="Toggle PWS Remover">TeronPWSRemoverButton_OnClick();</Binding>
-    <Binding header="Warrior Tank Tools" name="Toggle Tank Mode">TeronTankModeButton_OnClick();</Binding>
+    <Binding header="BINDING_HEADER_TERONWARRIORTANKTOOLS_HEADER" name="BINDING_NAME_TERONWARRIORTANKTOOLS_PWSREMOVE">TeronPWSRemoverButton_OnClick();</Binding>
+    <Binding header="BINDING_HEADER_TERONWARRIORTANKTOOLS_HEADER" name="BINDING_NAME_TERONWARRIORTANKTOOLS_TANKMODE">TeronTankModeButton_OnClick();</Binding>
 </Bindings>
