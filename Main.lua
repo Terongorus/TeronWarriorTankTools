@@ -2,21 +2,20 @@ BINDING_HEADER_TERONWARRIORTANKTOOLS_HEADER = "Teron Warrior Tank Tools";
 BINDING_NAME_TERONWARRIORTANKTOOLS_PWSREMOVE = "Toggle PWS Remover";
 BINDING_NAME_TERONWARRIORTANKTOOLS_TANKMODE = "Toggle Tank Mode";
 
-SLASH_TOGGLE_PWS = '/pwsremove'
-SlashCmdList["TOGGLE_PWS"] = function(command)
-    if command == "disable" then
-        Toggle_PWSRemove = false
-        UIErrorsFrame:Clear();
-        UIErrorsFrame:AddMessage("|cffff0000Power Word: Shield Remover Disabled|r");
+SLASH_TOGGLE_TWTT = '/twtt'
+SlashCmdList["TOGGLE_TWTT"] = function(command)
+    if command == "pws" then
+        TeronPWSRemoverButton_OnClick()
     end
-    if command == "enable" then
-        Toggle_PWSRemove = true
-        UIErrorsFrame:Clear();
-        UIErrorsFrame:AddMessage("|cff00ff00Power Word: Shield Remover Enabled|r");
+    if command == "tm" then
+        TeronTankModeButton_OnClick()
+    end
+    if command == "am" then
+        TeronAutoMarkButton_OnClick()
     end
 end
 
-local f = CreateFrame("TeronWarriorTankToolsFrame", "TeronWarriorTankToolsFrame", UIParent)
+local f = CreateFrame("Frame", "TeronWarriorTankToolsFrame", UIParent)
 f:RegisterEvent("PLAYER_AURAS_CHANGED")
 f:SetScript("OnEvent", function()
     if event == "PLAYER_AURAS_CHANGED" then 
@@ -69,6 +68,23 @@ button_2:SetScript("OnLoad", function()
     end
 end)
 
+--creates a button to toggle automark on and off
+local button_3 = CreateFrame("Button", "AutoMark_Button", TeronWarriorTankToolsFrame)
+button_3:SetPoint("RIGHT", button_2, "RIGHT", button_2.Height, 0);
+button_3:SetWidth(40);
+button_3:SetHeight(40);
+button_3:SetNormalTexture("Interface\\Icons\\");
+button_3:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD");
+button_3:SetScript("OnClick", function()
+    TeronAutoMarkButton_OnClick()
+end)
+button_3:SetScript("OnLoad", function()
+    if Toggle_AutoMark then
+        button_3:SetNormalTexture("Interface\\Icons\\");
+    else
+        button_3:SetNormalTexture("Interface\\Icons\\");
+    end
+end)
 
 function WarriorIsShieldEquipped()
 	local slot = GetInventorySlotInfo("SecondaryHandSlot")
